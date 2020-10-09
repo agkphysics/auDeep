@@ -443,7 +443,7 @@ class BaseFeatureLearningWrapper(LoggingMixin):
             coord = tf.train.Coordinator()
             threads = tf.train.start_queue_runners(sess=session, coord=coord)
 
-            for epoch in range(num_epochs):
+            for epoch in range(step, step + num_epochs):
                 for batch in range(num_batches):
                     start_time = time.time()
 
@@ -454,12 +454,13 @@ class BaseFeatureLearningWrapper(LoggingMixin):
                     self.log.info("epoch %d/%d, batch %d/%d, loss: %.4f (%.3f seconds)",
                                   epoch + 1, num_epochs, batch + 1, num_batches, l, duration)
 
-                    summary_writer.add_summary(summary, global_step=step)
-                    step += 1
+                summary_writer.add_summary(summary, global_step=step)
+                step += 1
 
-                saver.save(session, str(model_filename),
-                           global_step=step,
-                           write_meta_graph=False)
+                if epoch % 10 == 0:
+                    saver.save(session, str(model_filename),
+                               global_step=step,
+                               write_meta_graph=False)
 
             coord.request_stop()
 
