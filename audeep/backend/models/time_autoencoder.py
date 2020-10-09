@@ -305,7 +305,7 @@ class TimeAutoencoder(LoggingMixin):
         tf.Operation
             The optimization operation used for training the autoencoder
         """
-        optimizer = tf.train.AdamOptimizer(learning_rate=self.learning_rate)
+        optimizer = tf.train.AdamOptimizer(learning_rate=self.learning_rate, epsilon=1e-5)
         gvs = optimizer.compute_gradients(self.loss)
 
         with tf.variable_scope("clip_gradients"):
