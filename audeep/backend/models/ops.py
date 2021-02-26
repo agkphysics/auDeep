@@ -19,7 +19,7 @@
 import logging
 from typing import Union, Sequence, Optional
 
-import tensorflow as tf
+import tensorflow.compat.v1 as tf
 from tensorflow.python.ops.init_ops import Initializer
 
 

@@ -96,9 +96,9 @@ class AuDeepApp(App):
         if not self.options.debug:
             os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
 
-        import tensorflow as tf
+        import tensorflow.compat.v1 as tf
 
-        tf.compat.v1.logging.set_verbosity(tf.compat.v1.logging.FATAL)
+        tf.logging.set_verbosity(tf.logging.FATAL)
 
         self.LOG.debug("initializing app")
 

@@ -22,7 +22,7 @@ from pathlib import Path
 from typing import Mapping
 
 import numpy as np
-import tensorflow as tf
+import tensorflow.compat.v1 as tf
 from sklearn.preprocessing import StandardScaler
 from sklearn.svm import LinearSVC
 

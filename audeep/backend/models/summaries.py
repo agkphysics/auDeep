@@ -16,7 +16,7 @@
 # along with auDeep. If not, see <http://www.gnu.org/licenses/>.
 
 """Tensorflow summary operations"""
-import tensorflow as tf
+import tensorflow.compat.v1 as tf
 
 
 def variable_summaries(tensor: tf.Tensor):

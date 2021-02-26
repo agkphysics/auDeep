@@ -19,7 +19,7 @@
 from pathlib import Path
 from typing import Iterable, Sequence
 
-import tensorflow as tf
+import tensorflow.compat.v1 as tf
 
 from audeep.backend.data.records import to_tensor
 from audeep.backend.decorators import scoped_subgraph_initializers, scoped_subgraph

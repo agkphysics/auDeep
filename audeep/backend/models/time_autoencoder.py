@@ -18,7 +18,7 @@
 """A time-recurrent autoencoder"""
 from typing import Optional
 
-import tensorflow as tf
+import tensorflow.compat.v1 as tf
 
 from audeep.backend.decorators import scoped_subgraph_initializers, scoped_subgraph
 from audeep.backend.log import LoggingMixin

@@ -19,7 +19,7 @@
 from typing import Iterable
 
 import numpy as np
-import tensorflow as tf
+import tensorflow.compat.v1 as tf
 
 _DATA_RAW_KEY = "data_raw"
 

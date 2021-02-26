@@ -108,11 +108,11 @@ class Compare20ElderlyParser(LoggingMixin, Parser):
         metadata = self._metadata()
 
         for file in sorted(self._audio_dir.glob("*.*")):
-			#use the following line in order to attach the categorical arousal labels
-			#label_nominal = metadata.loc[metadata["filename_audio"] == file.name]["A_cat"]
+            #use the following line in order to attach the categorical arousal labels
+            #label_nominal = metadata.loc[metadata["filename_audio"] == file.name]["A_cat"]
 
-			#use the following line in order to attach the categorical valence labels
-			label_nominal = metadata.loc[metadata["filename_audio"] == file.name]["V_cat"]
+            #use the following line in order to attach the categorical valence labels
+            label_nominal = metadata.loc[metadata["filename_audio"] == file.name]["V_cat"]
 
             # test labels are '?'
             if all(l != '?' for l in label_nominal):

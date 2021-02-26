@@ -19,7 +19,7 @@
 import functools
 import inspect
 
-import tensorflow as tf
+import tensorflow.compat.v1 as tf
 
 
 def lazy_property(fun):

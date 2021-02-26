@@ -16,7 +16,7 @@
 # along with auDeep. If not, see <http://www.gnu.org/licenses/>.
 
 """Tensorflow model for a simple multilayer perceptron for classification"""
-import tensorflow as tf
+import tensorflow.compat.v1 as tf
 
 
 class MLPModel:

@@ -24,7 +24,7 @@ from pathlib import Path
 import arff
 import numpy as np
 import pandas as pd
-import tensorflow as tf
+import tensorflow.compat.v1 as tf
 
 from audeep.backend.data import records
 # noinspection PyProtectedMember

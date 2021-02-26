@@ -18,7 +18,7 @@
 """Implements a feature learning wrapper for time-autoencoders"""
 from typing import Dict
 
-import tensorflow as tf
+import tensorflow.compat.v1 as tf
 
 from audeep.backend.models.time_autoencoder import TimeAutoencoder
 from audeep.backend.training.base import BaseFeatureLearningWrapper

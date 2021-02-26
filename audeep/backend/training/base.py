@@ -22,7 +22,7 @@ from pathlib import Path
 from typing import Sequence, Mapping, Iterable, Dict, Optional
 
 import numpy as np
-import tensorflow as tf
+import tensorflow.compat.v1 as tf
 
 from audeep.backend.data.data_set import DataSet
 from audeep.backend.log import LoggingMixin

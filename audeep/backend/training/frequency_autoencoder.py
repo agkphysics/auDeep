@@ -18,7 +18,7 @@
 """Implements a feature learning wrapper for frequency-autoencoders"""
 from typing import Dict
 
-import tensorflow as tf
+import tensorflow.compat.v1 as tf
 
 from audeep.backend.models.frequency_autoencoder import FrequencyAutoencoder
 from audeep.backend.training.base import BaseFeatureLearningWrapper

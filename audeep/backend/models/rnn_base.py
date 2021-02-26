@@ -20,8 +20,8 @@ import abc
 from enum import Enum
 from typing import Optional, List, Any
 
-import tensorflow as tf
-from tensorflow.contrib.rnn import LSTMStateTuple, DropoutWrapper, GRUCell, LSTMCell, MultiRNNCell
+import tensorflow.compat.v1 as tf
+from tensorflow.compat.v1.nn.rnn_cell import LSTMStateTuple, DropoutWrapper, GRUCell, LSTMCell, MultiRNNCell
 
 from audeep.backend.decorators import scoped_subgraph_initializers, scoped_subgraph
 from audeep.backend.models.ops import flatten_time, restore_time
